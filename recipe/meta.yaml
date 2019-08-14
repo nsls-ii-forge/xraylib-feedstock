@@ -1,0 +1,72 @@
+{% set version = "3.3.0" %}
+
+package:
+  name: xraylib
+  version: {{ version }}
+
+source:
+  url: http://lvserver.ugent.be/xraylib/xraylib-{{version}}.tar.gz
+  sha256: a22a73b8d90eb752b034bab1a4cf6abdd81b8c7dc5020bcb22132d2ee7aacd42
+
+build:
+  number: 1002
+
+requirements:
+  build:
+    - m2-bash  # [win]
+    - m2-curl  # [win]
+    - m2-findutils  # [win]
+    - m2-diffutils  # [win]
+    - m2-gawk  # [win]
+    - m2-grep  # [win]
+    - m2-make  # [win]
+    - m2-sed  # [win]
+    - m2-which  # [win]
+    - m2-tar  # [win]
+    - {{ compiler('fortran') }}        # [unix]
+    - {{ compiler('m2w64_fortran') }}  # [win]
+    - {{ compiler('c') }}        # [unix]
+    - {{ compiler('m2w64_c') }}  # [win]
+    - {{ compiler('cxx') }}        # [unix]
+    - {{ compiler('m2w64_cxx') }}  # [win]
+  host:
+    - python
+    - setuptools
+    - cython
+    - numpy
+    - swig  # [not win]
+    - m2w64-binutils  # [win]
+    - m2w64-gcc  # [win]
+    - m2w64-tools-git  # [win]
+
+  run:
+    - python
+    - {{ pin_compatible('numpy') }}   # [not (win and (py35 or py36))]
+    - {{ pin_compatible('numpy') }}   # [win and py35]
+    - {{ pin_compatible('numpy') }}   # [win and py36]
+
+test:
+  commands:
+    # The xraylib command does not work on Anaconda, as it would not be able
+    # to find the help text files. In my xraylib SDK for Windows, I rely on
+    # the registry to find them as the installer writes entries in it, but
+    # not sure how that would work here.
+    - xraylib  # [not win]
+    - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
+    - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
+  imports:
+    - xraylib
+    - xraylib_np
+
+about:
+  license: BSD 3-Clause
+  home: https://github.com/tschoonj/xraylib/wiki
+  summary: A library for X-ray matter interaction cross sections for X-ray fluorescence applications
+
+extra:
+  recipe-maintainers:
+    - ericdill
+    - tacaswell
+    - licode
+    - tschoonj
+    - CJ-Wright
