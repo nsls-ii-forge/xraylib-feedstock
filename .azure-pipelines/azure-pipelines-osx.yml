@@ -10,14 +10,30 @@ jobs:
   strategy:
     maxParallel: 8
     matrix:
-      osx_python3.6:
-        CONFIG: osx_python3.6
+      osx_fortran_compiler_version4python3.6ruby2.5:
+        CONFIG: osx_fortran_compiler_version4python3.6ruby2.5
         UPLOAD_PACKAGES: True
-        UPLOAD_ON_BRANCH: master
-      osx_python3.7:
-        CONFIG: osx_python3.7
+      osx_fortran_compiler_version4python3.6ruby2.6:
+        CONFIG: osx_fortran_compiler_version4python3.6ruby2.6
         UPLOAD_PACKAGES: True
-        UPLOAD_ON_BRANCH: master
+      osx_fortran_compiler_version4python3.7ruby2.5:
+        CONFIG: osx_fortran_compiler_version4python3.7ruby2.5
+        UPLOAD_PACKAGES: True
+      osx_fortran_compiler_version4python3.7ruby2.6:
+        CONFIG: osx_fortran_compiler_version4python3.7ruby2.6
+        UPLOAD_PACKAGES: True
+      osx_fortran_compiler_version7python3.6ruby2.5:
+        CONFIG: osx_fortran_compiler_version7python3.6ruby2.5
+        UPLOAD_PACKAGES: True
+      osx_fortran_compiler_version7python3.6ruby2.6:
+        CONFIG: osx_fortran_compiler_version7python3.6ruby2.6
+        UPLOAD_PACKAGES: True
+      osx_fortran_compiler_version7python3.7ruby2.5:
+        CONFIG: osx_fortran_compiler_version7python3.7ruby2.5
+        UPLOAD_PACKAGES: True
+      osx_fortran_compiler_version7python3.7ruby2.6:
+        CONFIG: osx_fortran_compiler_version7python3.7ruby2.6
+        UPLOAD_PACKAGES: True
 
   steps:
   # TODO: Fast finish on azure pipelines?
@@ -73,8 +89,10 @@ jobs:
 
   - script: |
       source activate base
+      export GIT_BRANCH=$BUILD_SOURCEBRANCHNAME
+      export UPLOAD_ON_BRANCH="master"
       upload_package ./ ./recipe ./.ci_support/${CONFIG}.yaml
     displayName: Upload recipe
     env:
       BINSTAR_TOKEN: $(BINSTAR_TOKEN)
-    condition: and(eq(variables['UPLOAD_PACKAGES'], 'True'), eq(variables['Build.SourceBranch'], format('refs/heads/{0}', variables['UPLOAD_ON_BRANCH'])))
+    condition: not(eq(variables['UPLOAD_PACKAGES'], 'False'))
