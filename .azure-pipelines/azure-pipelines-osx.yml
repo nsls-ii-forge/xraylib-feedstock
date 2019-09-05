@@ -10,29 +10,17 @@ jobs:
   strategy:
     maxParallel: 8
     matrix:
-      osx_fortran_compiler_version4python3.6ruby2.5:
-        CONFIG: osx_fortran_compiler_version4python3.6ruby2.5
+      osx_fortran_compiler_version4python3.6:
+        CONFIG: osx_fortran_compiler_version4python3.6
         UPLOAD_PACKAGES: True
-      osx_fortran_compiler_version4python3.6ruby2.6:
-        CONFIG: osx_fortran_compiler_version4python3.6ruby2.6
+      osx_fortran_compiler_version4python3.7:
+        CONFIG: osx_fortran_compiler_version4python3.7
         UPLOAD_PACKAGES: True
-      osx_fortran_compiler_version4python3.7ruby2.5:
-        CONFIG: osx_fortran_compiler_version4python3.7ruby2.5
+      osx_fortran_compiler_version7python3.6:
+        CONFIG: osx_fortran_compiler_version7python3.6
         UPLOAD_PACKAGES: True
-      osx_fortran_compiler_version4python3.7ruby2.6:
-        CONFIG: osx_fortran_compiler_version4python3.7ruby2.6
-        UPLOAD_PACKAGES: True
-      osx_fortran_compiler_version7python3.6ruby2.5:
-        CONFIG: osx_fortran_compiler_version7python3.6ruby2.5
-        UPLOAD_PACKAGES: True
-      osx_fortran_compiler_version7python3.6ruby2.6:
-        CONFIG: osx_fortran_compiler_version7python3.6ruby2.6
-        UPLOAD_PACKAGES: True
-      osx_fortran_compiler_version7python3.7ruby2.5:
-        CONFIG: osx_fortran_compiler_version7python3.7ruby2.5
-        UPLOAD_PACKAGES: True
-      osx_fortran_compiler_version7python3.7ruby2.6:
-        CONFIG: osx_fortran_compiler_version7python3.7ruby2.6
+      osx_fortran_compiler_version7python3.7:
+        CONFIG: osx_fortran_compiler_version7python3.7
         UPLOAD_PACKAGES: True
 
   steps:

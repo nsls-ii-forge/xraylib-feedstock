@@ -43,59 +43,31 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>osx_fortran_compiler_version4python3.6ruby2.5</td>
+              <td>osx_fortran_compiler_version4python3.6</td>
               <td>
                 <a href="https://dev.azure.com/nsls2forge/nsls2forge/_build/latest?definitionId=37&branchName=master">
-                  <img src="https://dev.azure.com/nsls2forge/nsls2forge/_apis/build/status/xraylib-feedstock?branchName=master&jobName=osx&configuration=osx_fortran_compiler_version4python3.6ruby2.5" alt="variant">
+                  <img src="https://dev.azure.com/nsls2forge/nsls2forge/_apis/build/status/xraylib-feedstock?branchName=master&jobName=osx&configuration=osx_fortran_compiler_version4python3.6" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_fortran_compiler_version4python3.6ruby2.6</td>
+              <td>osx_fortran_compiler_version4python3.7</td>
               <td>
                 <a href="https://dev.azure.com/nsls2forge/nsls2forge/_build/latest?definitionId=37&branchName=master">
-                  <img src="https://dev.azure.com/nsls2forge/nsls2forge/_apis/build/status/xraylib-feedstock?branchName=master&jobName=osx&configuration=osx_fortran_compiler_version4python3.6ruby2.6" alt="variant">
+                  <img src="https://dev.azure.com/nsls2forge/nsls2forge/_apis/build/status/xraylib-feedstock?branchName=master&jobName=osx&configuration=osx_fortran_compiler_version4python3.7" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_fortran_compiler_version4python3.7ruby2.5</td>
+              <td>osx_fortran_compiler_version7python3.6</td>
               <td>
                 <a href="https://dev.azure.com/nsls2forge/nsls2forge/_build/latest?definitionId=37&branchName=master">
-                  <img src="https://dev.azure.com/nsls2forge/nsls2forge/_apis/build/status/xraylib-feedstock?branchName=master&jobName=osx&configuration=osx_fortran_compiler_version4python3.7ruby2.5" alt="variant">
+                  <img src="https://dev.azure.com/nsls2forge/nsls2forge/_apis/build/status/xraylib-feedstock?branchName=master&jobName=osx&configuration=osx_fortran_compiler_version7python3.6" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_fortran_compiler_version4python3.7ruby2.6</td>
+              <td>osx_fortran_compiler_version7python3.7</td>
               <td>
                 <a href="https://dev.azure.com/nsls2forge/nsls2forge/_build/latest?definitionId=37&branchName=master">
-                  <img src="https://dev.azure.com/nsls2forge/nsls2forge/_apis/build/status/xraylib-feedstock?branchName=master&jobName=osx&configuration=osx_fortran_compiler_version4python3.7ruby2.6" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_fortran_compiler_version7python3.6ruby2.5</td>
-              <td>
-                <a href="https://dev.azure.com/nsls2forge/nsls2forge/_build/latest?definitionId=37&branchName=master">
-                  <img src="https://dev.azure.com/nsls2forge/nsls2forge/_apis/build/status/xraylib-feedstock?branchName=master&jobName=osx&configuration=osx_fortran_compiler_version7python3.6ruby2.5" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_fortran_compiler_version7python3.6ruby2.6</td>
-              <td>
-                <a href="https://dev.azure.com/nsls2forge/nsls2forge/_build/latest?definitionId=37&branchName=master">
-                  <img src="https://dev.azure.com/nsls2forge/nsls2forge/_apis/build/status/xraylib-feedstock?branchName=master&jobName=osx&configuration=osx_fortran_compiler_version7python3.6ruby2.6" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_fortran_compiler_version7python3.7ruby2.5</td>
-              <td>
-                <a href="https://dev.azure.com/nsls2forge/nsls2forge/_build/latest?definitionId=37&branchName=master">
-                  <img src="https://dev.azure.com/nsls2forge/nsls2forge/_apis/build/status/xraylib-feedstock?branchName=master&jobName=osx&configuration=osx_fortran_compiler_version7python3.7ruby2.5" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_fortran_compiler_version7python3.7ruby2.6</td>
-              <td>
-                <a href="https://dev.azure.com/nsls2forge/nsls2forge/_build/latest?definitionId=37&branchName=master">
-                  <img src="https://dev.azure.com/nsls2forge/nsls2forge/_apis/build/status/xraylib-feedstock?branchName=master&jobName=osx&configuration=osx_fortran_compiler_version7python3.7ruby2.6" alt="variant">
+                  <img src="https://dev.azure.com/nsls2forge/nsls2forge/_apis/build/status/xraylib-feedstock?branchName=master&jobName=osx&configuration=osx_fortran_compiler_version7python3.7" alt="variant">
                 </a>
               </td>
             </tr><tr>
