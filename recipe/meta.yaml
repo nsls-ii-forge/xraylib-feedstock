@@ -1,12 +1,14 @@
+{% set name = "xraylib" %}
 {% set version = "3.3.0" %}
+{% set sha256 = "a22a73b8d90eb752b034bab1a4cf6abdd81b8c7dc5020bcb22132d2ee7aacd42" %}
 
 package:
-  name: xraylib
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: http://lvserver.ugent.be/xraylib/xraylib-{{version}}.tar.gz
-  sha256: a22a73b8d90eb752b034bab1a4cf6abdd81b8c7dc5020bcb22132d2ee7aacd42
+  url: http://lvserver.ugent.be/{{ name }}/{{ name }}-{{version}}.tar.gz
+  sha256: {{ sha256 }}
 
 build:
   number: 0
@@ -35,7 +37,6 @@ requirements:
     - setuptools
     - cython
     - numpy
-    - ruby  # [osx]
     - swig  # [not win]
     - m2w64-binutils  # [win]
     - m2w64-gcc  # [win]
@@ -64,11 +65,3 @@ about:
   license_file: license_all.txt
   home: https://github.com/tschoonj/xraylib/wiki
   summary: A library for X-ray matter interaction cross sections for X-ray fluorescence applications
-
-extra:
-  recipe-maintainers:
-    - ericdill
-    - tacaswell
-    - licode
-    - tschoonj
-    - CJ-Wright
