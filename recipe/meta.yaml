@@ -1,6 +1,6 @@
 {% set name = "xraylib" %}
-{% set version = "3.3.0" %}
-{% set sha256 = "a22a73b8d90eb752b034bab1a4cf6abdd81b8c7dc5020bcb22132d2ee7aacd42" %}
+{% set version = "4.0.0" %}
+{% set sha256 = "578dfd69610b7274fc79e9e5ebe6a42faca5adeef50a12f87c038a29e9a8674d" %}
 
 package:
   name: {{ name|lower }}
