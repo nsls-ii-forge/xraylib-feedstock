@@ -1,9 +1,9 @@
+cdt_name:
+- cos6
 channel_sources:
 - nsls2forge,defaults
 channel_targets:
 - nsls2forge main
-docker_image:
-- nsls2/nsls2forge:latest
 m2w64_c_compiler:
 - m2w64-toolchain
 m2w64_cxx_compiler:
@@ -11,10 +11,15 @@ m2w64_cxx_compiler:
 m2w64_fortran_compiler:
 - m2w64-toolchain
 numpy:
-- '1.14'
+- '1.16'
 pin_run_as_build:
   python:
     min_pin: x.x
     max_pin: x.x
 python:
-- '3.7'
+- '3.9'
+target_platform:
+- win-64
+zip_keys:
+- - python
+  - numpy
