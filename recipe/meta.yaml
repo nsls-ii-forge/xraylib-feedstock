@@ -1,18 +1,18 @@
 {% set name = "xraylib" %}
-{% set version = "4.0.0" %}
-{% set sha256 = "578dfd69610b7274fc79e9e5ebe6a42faca5adeef50a12f87c038a29e9a8674d" %}
+{% set version = "4.1.0" %}
+{% set sha256 = "3b6b07118153369f8d55b197fa8f341e38cb5fabc611deb576d2c805be5db7c4" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: http://lvserver.ugent.be/{{ name }}/{{ name }}-{{version}}.tar.gz
+  url: http://lvserver.ugent.be/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
   number: 0
-  skip: True  # [py<36]
+  skip: true  # [py<36]
 
 requirements:
   build:
